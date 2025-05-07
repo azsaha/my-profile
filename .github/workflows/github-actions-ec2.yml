@@ -7,6 +7,16 @@ on:
       - main
 
 jobs:
+  # manual-approval:
+  #   name: Manual Approval
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Await Manual Approval
+  #       uses: trstringer/manual-approval@v1
+  #       with:
+  #         SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+  #         approvers: user1 
+
   deploy:
     name: Deploy to EC2 on master branch push
     runs-on: ubuntu-latest
