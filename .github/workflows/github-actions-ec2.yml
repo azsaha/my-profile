@@ -30,9 +30,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            aws ec2 stop-instances --instance-ids i-05491dd3b576888bb
-            sudo find / -type f -size +10M -exec ls -1h {} \
-            aws ec2 start-instances --instance-ids i-05491dd3b576888bb
+            sudo rm /var/www/html/*
             sudo apt-get -y update
             sudo apt-get install -y apache2
             sudo systemctl start apache2
