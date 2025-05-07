@@ -34,7 +34,7 @@ jobs:
             sudo apt-get install -y apache2
             sudo systemctl start apache2
             sudo systemctl enable apache2
-            sudo cd /var/www/html/
-            sudo rm -r *
-            cd --
+            # sudo cd /var/www/html/
+            # sudo rm -r *
+            cd home
             sudo mv * /var/www/html
