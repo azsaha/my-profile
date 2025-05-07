@@ -37,4 +37,5 @@ jobs:
             # sudo cd /var/www/html/
             # sudo rm -r *
             cd home
-            sudo mv -f * /var/www/html
+            # sudo mv * /var/www/html
+            sudo rsync -av --remove-source-files * /var/www/html
