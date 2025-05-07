@@ -30,10 +30,11 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo rm /var/www/html/*
             sudo apt-get -y update
             sudo apt-get install -y apache2
             sudo systemctl start apache2
             sudo systemctl enable apache2
+            sudo cd /var/www/html/
+            sudo rm -r *
             cd home
             sudo mv -iu * /var/www/html
