@@ -39,17 +39,17 @@ jobs:
             cd home
             # sudo mv * /var/www/html
             sudo rsync -av --remove-source-files * /var/www/html
-          with:
-          host: ${{ secrets.HOST_DNS2 }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            sudo apt-get -y update
-            sudo apt-get install -y apache2
-            sudo systemctl start apache2
-            sudo systemctl enable apache2
-            # sudo cd /var/www/html/
-            # sudo rm -r *
-            cd home
-            # sudo mv * /var/www/html
-            sudo rsync -av --remove-source-files * /var/www/html
+          # with:
+          # host: ${{ secrets.HOST_DNS2 }}
+          # username: ${{ secrets.USERNAME }}
+          # key: ${{ secrets.EC2_SSH_KEY }}
+          # script: |
+          #   sudo apt-get -y update
+          #   sudo apt-get install -y apache2
+          #   sudo systemctl start apache2
+          #   sudo systemctl enable apache2
+          #   # sudo cd /var/www/html/
+          #   # sudo rm -r *
+          #   cd home
+          #   # sudo mv * /var/www/html
+          #   sudo rsync -av --remove-source-files * /var/www/html
